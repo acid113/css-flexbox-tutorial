@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #252329;
+  font-family: "Poppins", sans-serif;
+  color: snow;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.task {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.container {
+  background-color: snow;
+  border: 1px solid lightgray;
+  height: 200px;
+  border-radius: 4px;
+}
+
+.item {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  background-color: tomato;
+  text-align: center;
+}
+
+.sm {
+  width: 20px;
+}
+
+.lg {
+  width: 80px;
+}
+
+/* TASK 1 */
+.task-1 .container {
+  display: flex;
+}
+
+/* TASK 2 */
+.task-2 .container {
+  display: flex;
+  align-items: center; /* vertical axis alignment */
+  justify-content: center; /* horizontal axis alignment */
+}
+
+/* TASK 3 */
+.task-3 .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* TASK 4 */
+.task-4 .option-1 .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-4 .option-2 .container {
+  display: flex;
+}
+
+/* "space" <div> was added and then widened */
+.task-4 .option-2 .space {
+  flex-grow: 1;
+}
+
+.task-4 .option-3 .container {
+  display: flex;
+}
+
+.task-4 .option-3 .item:first-child {
+  flex-grow: 1;
+}
+
+/* TASK 5 */
+.task-5 .container {
+  display: flex;
+}
+
+.task-5 .item-1 {
+  /* flex-grow: 1; */
+
+  /* you can set one of the items to be bigger */
+  /* flex-grow: 3; */
+
+  /* alternatively, you can use "flex" */
+  flex: 1;
+}
+
+.task-5 .item-2 {
+  /* flex-grow: 1; */
+  flex: 1;
+}
+
+.task-5 .item-3 {
+  /* flex-grow: 1; */
+  flex: 1;
+}
+
+.task-5 .item-4 {
+  /* flex-grow: 1; */
+  flex: 1;
+}
+
+/* TASK 6 */
+.task-6 .container {
+  display: flex;
+
+  /* when browser's width gets smaller, child <div>s are moved to next line instead of their size getting smaller */
+  flex-wrap: wrap;
+}
+
+.task-6 .item {
+  /* 
+  - to remove excess whitespace at the end, we're setting each <div> to get 50% width
+  - this means only 2 <div> per row is displayed regardless of browser size
+  */
+  /* width: 50%; */
+
+  /* alternatively, you can use "flex-basis" */
+  flex-basis: 50%;
+}
+
+@media (min-width: 375px) {
+  .task-6 .item {
+    /* 
+    - sets to display 4 <div> per row when width >= 375px 
+    - but will display 2 <div> per row when width < 375px
+    */
+    /* width: 25%; */
+
+    flex-basis: 25%;
+  }
+}
+
+/* TASK 7 */
+.task-7 .container {
+  display: flex;
+}
+
+.task-7 .item-1 {
+  order: 4;
+}
+
+.task-7 .item-2 {
+  order: 3;
+}
+
+.task-7 .item-3 {
+  order: 2;
+}
+
+.task-7 .item-4 {
+  order: 1;
+}
+
+/* TASK 8 */
+.task-8 .container {
+  display: flex;
+}
+
+.task-8 .item-3 {
+  /* moves specific <div> to a different vertical position */
+  align-self: center;
+}
